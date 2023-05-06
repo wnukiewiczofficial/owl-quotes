@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="description" content="Mood tips for those who need help and lead">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <!-- /META -->
+
+    <title>Mood Tips</title>
+
+    <link rel="icon" type="image/png" href="images/owl_idle.png"/>
+    <link rel="preload" href="fonts/porkys.ttf" as="font" />
+    <link rel="preload" href="fonts/nunito.ttf" as="font" />
+    <style>
+      @font-face {
+        font-family: "Porkys";
+        src: url('fonts/porkys.ttf') format('truetype');
+      }
+
+      @font-face {
+        font-family: "Nunito";
+        src: url('fonts/nunito.ttf') format('truetype');
+      }
+
+      html, body{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: rgb(99, 207, 93);
+      }
+      canvas{
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .social{
+        display: flex;
+        position: absolute;
+        width: 25%;
+        bottom: 1%;
+        left: 1%;
+        justify-content: space-around;
+        user-select: none;
+      }
+
+      .social a img{
+        width: 2.5vw;
+      }
+
+      .pages{
+        display: flex;
+        position: absolute;
+        width: 25%;
+        bottom: 0;
+        right: 0;
+        font-size: 2vw;
+        justify-content: space-around;
+        user-select: none;
+      }
+
+      .pages a{
+        text-decoration: none;
+        font-family: "Porkys";
+        color: rgb(0, 148, 17);
+        -webkit-text-stroke-width: 0.1vw;
+        -webkit-text-stroke-color: black;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .social{
+          width: 80%;
+          bottom: 5vh;
+          left: 10%;
+          justify-content: space-around;
+        }
+        .social a img{
+          width: 2.5vh;
+        }
+        .pages {
+          width: 100%;
+          bottom: 1%;
+          font-size: 2vh;
+        }
+      }
+
+
+    </style>
+</head>
+<body>
+  <canvas id="canvas" width="1200" height="600"></canvas>
+
+  <div class="social">
+    <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="FB"></a>
+    <a href="https://twitter.com/"><img src="images/twitter.png" alt="TW"></a>
+    <a href="https://www.linkedin.com/"><img src="images/linkedin.png" alt="LD"></a>
+  </div>
+  <div class="pages">
+    <a id="idea" href="idea.html">Our idea</a>|
+    <a id="disclaimer" href="disclaimer.html">Disclaimer</a>|
+    <a id="terms" href="terms.html">Terms</a>
+  </div>
+
+
+  <!-- <audio controls loop autoplay preload="auto" id="bgMusic">
+    <source src="sounds/background_music.mp3" type="audio/mp3"/>
+  </audio> -->
+
+  <script src="data/storage.json"></script>
+  <script src="js/addons.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
